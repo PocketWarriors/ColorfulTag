@@ -28,7 +28,7 @@ class Tag extends PluginBase{
      }
      
      public function onCommand(CommandSender $issuer, Command $cmd, $label, array $args){
-          if($issuer->hasPermission("tagblue.command")){
+          if($issuer->hasPermission("tag.command")){
                if($issuer instanceof Player){
                     if($cmd->getName() === "tagblue"){
                          $this->tagblue($issuer);
