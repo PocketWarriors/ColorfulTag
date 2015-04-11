@@ -11,7 +11,6 @@ commands:
     description: make your name blue
     usage: /tagblue
 permissions: tag.command
-    description: ""
     default: op
  children:
    tag.command.blue:
