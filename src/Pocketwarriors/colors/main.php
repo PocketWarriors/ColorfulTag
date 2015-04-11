@@ -11,7 +11,7 @@ use pocketmine\command\Command;
 use pocketmine\utils\TextFormat;
 
 class main extends PluginBase{
-     
+  
      public function onEnable(){
           $this->getLogger()->info(TextFormat::AQUA." Loaded Successfully!");
      }
@@ -49,6 +49,7 @@ class main extends PluginBase{
      public function onCommand(CommandSender $issuer, Command $cmd, $label, array $args){
           switch($cmd->getName()){
           case "tag":
+          if($issuer instanceof Player){  
           switch($args[0]){
 	                case "blue":
 			if($sender->hasPermission("tag.command.blue") or $sender->hasPermission("tag.command")){
