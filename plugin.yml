@@ -8,11 +8,11 @@ website: github.com/PocketWarriors/ColorfulTag
 
 commands:
     tag:
-    description: make your name blue
-    usage: /tag
+    description: "make your name blue"
+    usage: "/tag"
 permissions:
 tag:
-description: make your name blue
+description: "make your name blue"
     default: op
  children:
    tag.command.blue:
