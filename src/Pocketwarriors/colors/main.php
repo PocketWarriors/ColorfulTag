@@ -51,28 +51,28 @@ class main extends PluginBase{
           case "tag":
           switch($args[0]){
 					case "blue":
-						if($sender->hasPermission("tag.command.blue") or if($issuer->hasPermission("tag.command")){
+						if($sender->hasPermission("tag.command.blue") or $sender->hasPermission("tag.command")){
                if($issuer instanceof Player){
                          $this->tagblue($issuer);
                          return true;
                     }
                     	case "red":
-						if($sender->hasPermission("tag.command.red") or if($issuer->hasPermission("tag.command")){
+						if($sender->hasPermission("tag.command.red") or $sender->hasPermission("tag.command")){
                          $this->tagred($issuer);
                          return true;
 						}
                     	case "green":
-						if($sender->hasPermission("tag.command.green") or if($issuer->hasPermission("tag.command")){
+						if($sender->hasPermission("tag.command.green") or $sender->hasPermission("tag.command")){
                          $this->taggreen($issuer);
                          return true;
 						}
                     	case "gold":
-						if($sender->hasPermission("tag.command.gold") or if($issuer->hasPermission("tag.command")){
+						if($sender->hasPermission("tag.command.gold") or $sender->hasPermission("tag.command")){
                          $this->taggold($issuer);
                          return true;
                          
 	                    case "reset":
-						if($sender->hasPermission("tag.command.reset") or if($issuer->hasPermission("tag.command")){
+						if($sender->hasPermission("tag.command.reset") or $sender->hasPermission("tag.command")){
                          $this->tagreset($issuer);
                          return true;
                     }
