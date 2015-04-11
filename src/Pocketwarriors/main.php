@@ -1,6 +1,6 @@
 <?php
 
-namespace Pocketwarriors\main;
+namespace main;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\Plugin;
