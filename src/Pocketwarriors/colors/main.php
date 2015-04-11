@@ -1,6 +1,6 @@
 <?php
 
-namespace main;
+namespace Pocketwarriors\colors;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\Plugin;
@@ -21,7 +21,7 @@ class main extends PluginBase{
      }
      
      public function tagblue(Player $player){
-          $currentTag = $player->getName()->getNameTag();
+          $currentTag = $player->getName();
           $player->setNameTag("§1.$currentTag");
           $player->sendMessage("[ColorfulTag] Your NameTag has been changed to blue");
      }
