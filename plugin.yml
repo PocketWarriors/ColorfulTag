@@ -7,13 +7,27 @@ authors: [Wantedkillers (Author)]
 website: github.com/PocketWarriors/ColorfulTag
 
 commands:
-  tagblue:
+    tag:
     description: make your name blue
     usage: /tagblue
-  tagreset:
-    description: reset your name to default
-    usage: /tagreset
 permissions:
   tag.command:
-    description: "Hide oneself and unhide oneself"
+    description: ""
     default: op
+ children:
+   tag.command.blue:
+    description: ""
+    default: op
+   tag.command:
+    description: "Runs all commands"
+    default: op
+    children:
+     tag.command.red:
+      description: ""
+      default: true
+     tag.command.green:
+      description: ""
+      default: true
+    tag.command.gold:
+      description: ""
+      default: true
