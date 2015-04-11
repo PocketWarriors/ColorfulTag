@@ -1,5 +1,7 @@
 <?php
-namespace Wantedkillerss\HideTag;
+
+namespace Pocketwarriors\main;
+
 use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\Plugin;
 use pocketmine\Player;
@@ -7,7 +9,9 @@ use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\utils\TextFormat;
-class Tag extends PluginBase{
+
+class main extends PluginBase{
+     
      public function onEnable(){
           $this->getLogger()->info(TextFormat::AQUA." Loaded Successfully!");
      }
