@@ -56,25 +56,32 @@ class main extends PluginBase{
                          $this->tagblue($issuer);
                          return true;
                     }
+                    break;
+                    
                     	case "red":
 						if($sender->hasPermission("tag.command.red") or $sender->hasPermission("tag.command")){
                          $this->tagred($issuer);
                          return true;
 						}
+						break;
                     	case "green":
-						if($sender->hasPermission("tag.command.green") or $sender->hasPermission("tag.command")){
+			if($sender->hasPermission("tag.command.green") or $sender->hasPermission("tag.command")){
                          $this->taggreen($issuer);
                          return true;
 						}
+						break;
                     	case "gold":
 						if($sender->hasPermission("tag.command.gold") or $sender->hasPermission("tag.command")){
                          $this->taggold($issuer);
                          return true;
-                         
+						}
+						break;
 	                    case "reset":
 						if($sender->hasPermission("tag.command.reset") or $sender->hasPermission("tag.command")){
                          $this->tagreset($issuer);
                          return true;
+						}
+						break;
                     }
                }else{
                     $issuer->sendMessage("Command only works in-game!");
