@@ -12,8 +12,8 @@ commands:
     usage: "/tag"
 permissions:
 tag:
-description: "make your name blue"
-default: op
+ description: "make your name blue"
+ default: op
  children:
    tag.command.blue:
     description: ""
