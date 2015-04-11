@@ -1,0 +1,19 @@
+name: ColorfulTag
+main: ColorfulTag\main
+version: 0.5
+api: [1.20.0]
+load: POSTWORLD
+authors: [Wantedkillers (Author)]
+website: github.com/PocketWarriors/ColorfulTag
+
+commands:
+  tagblue:
+    description: make your name blue
+    usage: /tagblue
+  tagreset:
+    description: reset your name to default
+    usage: /tagreset
+permissions:
+  tag.command:
+    description: "Hide oneself and unhide oneself"
+    default: op
