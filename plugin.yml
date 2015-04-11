@@ -10,8 +10,7 @@ commands:
     tag:
     description: make your name blue
     usage: /tagblue
-permissions:
-  tag.command:
+permissions: tag.command
     description: ""
     default: op
  children:
