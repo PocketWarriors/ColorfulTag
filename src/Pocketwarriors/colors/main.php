@@ -48,6 +48,7 @@ class main extends PluginBase{
      
      public function onCommand(CommandSender $issuer, Command $cmd, $label, array $args){
           switch($cmd->getName()){
+                  } 
           case "tag":
           switch($args[0]){
 	                case "blue":
