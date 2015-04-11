@@ -22,8 +22,23 @@ class main extends PluginBase{
      
      public function tagblue(Player $player){
           $currentTag = $player->getName();
-          $player->setNameTag("§1.$currentTag");
+          $player->setNameTag("§1$currentTag");
           $player->sendMessage("[ColorfulTag] Your NameTag has been changed to blue");
+     }
+          public function tagred(Player $player){
+          $currentTag = $player->getName();
+          $player->setNameTag("§c$currentTag");
+          $player->sendMessage("[ColorfulTag] Your NameTag has been changed to red");
+     }
+       public function taggreen(Player $player){
+          $currentTag = $player->getName();
+          $player->setNameTag("§a$currentTag");
+          $player->sendMessage("[ColorfulTag] Your NameTag has been changed to green");
+     }
+      public function taggold(Player $player){
+          $currentTag = $player->getName();
+          $player->setNameTag("§6$currentTag");
+          $player->sendMessage("[ColorfulTag] Your NameTag has been changed to gold");
      }
      
      public function tagreset(Player $player){
@@ -32,13 +47,32 @@ class main extends PluginBase{
      }
      
      public function onCommand(CommandSender $issuer, Command $cmd, $label, array $args){
-          if($issuer->hasPermission("tag.command")){
+          switch($cmd->getName()){
+          case "tag":
+          switch($args[0]){
+					case "blue":
+						if($sender->hasPermission("tag.command.blue") or if($issuer->hasPermission("tag.command")){
                if($issuer instanceof Player){
-                    if($cmd->getName() === "tagblue"){
                          $this->tagblue($issuer);
                          return true;
                     }
-                    if($cmd->getName() === "unhidetag"){
+                    	case "red":
+						if($sender->hasPermission("tag.command.red") or if($issuer->hasPermission("tag.command")){
+                         $this->tagred($issuer);
+                         return true;
+						}
+                    	case "green":
+						if($sender->hasPermission("tag.command.green") or if($issuer->hasPermission("tag.command")){
+                         $this->taggreen($issuer);
+                         return true;
+						}
+                    	case "gold":
+						if($sender->hasPermission("tag.command.gold") or if($issuer->hasPermission("tag.command")){
+                         $this->taggold($issuer);
+                         return true;
+                         
+	                    case "reset":
+						if($sender->hasPermission("tag.command.reset") or if($issuer->hasPermission("tag.command")){
                          $this->tagreset($issuer);
                          return true;
                     }
