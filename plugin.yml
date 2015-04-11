@@ -13,7 +13,7 @@ commands:
 permissions:
 tag:
 description: "make your name blue"
-    default: op
+default: op
  children:
    tag.command.blue:
     description: ""
