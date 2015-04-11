@@ -52,7 +52,6 @@ class main extends PluginBase{
           switch($args[0]){
 	                case "blue":
 			if($sender->hasPermission("tag.command.blue") or $sender->hasPermission("tag.command")){
-               if($issuer instanceof Player){
                          $this->tagblue($issuer);
                          return true;
                         }
