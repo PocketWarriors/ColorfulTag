@@ -52,42 +52,52 @@ class main extends PluginBase{
           switch($args[0]){
 	                case "blue":
 			if($sender->hasPermission("tag.command.blue") or $sender->hasPermission("tag.command")){
+              }else{
+	$sender->sendMessage("You do not have permission to use that command.");
+        return true;
                          $this->tagblue($issuer);
                          return true;
+                         
                         }
                         break;
-                    	case "red":
+                        case "red":                           
 			if($sender->hasPermission("tag.command.red") or $sender->hasPermission("tag.command")){
+                                          }else{
+	$sender->sendMessage("You do not have permission to use that command.");
+        return true;
                          $this->tagred($issuer);
                          return true;
                         }
                         break;
                     	case "green":
 			if($sender->hasPermission("tag.command.green") or $sender->hasPermission("tag.command")){
+                                          }else{
+	$sender->sendMessage("You do not have permission to use that command.");
+        return true;
                          $this->taggreen($issuer);
                          return true;
                         }
 			break;
                     	case "gold":
 			if($sender->hasPermission("tag.command.gold") or $sender->hasPermission("tag.command")){
+                                          }else{
+	$sender->sendMessage("You do not have permission to use that command.");
+        return true;
                          $this->taggold($issuer);
                          return true;
 	         	}
 			break;
 	                case "reset":
 			if($sender->hasPermission("tag.command.reset") or $sender->hasPermission("tag.command")){
+                                          }else{
+	$sender->sendMessage("You do not have permission to use that command.");
+        return true;
                          $this->tagreset($issuer);
                          return true;
 			}
 			break;
                     }
-               }else{
-                    $issuer->sendMessage("Command only works in-game!");
-                    return true;
-               }
-          }else{
-               $issuer->sendMessage("You don't have permission for this!");
-               return true;
+
           }
      }
 }
