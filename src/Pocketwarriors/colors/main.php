@@ -49,6 +49,7 @@ class main extends PluginBase{
      public function onCommand(CommandSender $issuer, Command $cmd, $label, array $args){
           switch($cmd->getName()){
           case "tag":
+         if($sender->hasPermission("tag.command")){	
           if($issuer instanceof Player){  
           switch($args[0]){
 	                case "blue":
