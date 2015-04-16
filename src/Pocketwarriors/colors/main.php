@@ -20,21 +20,21 @@ class main extends PluginBase{
           $this->getLogger()->info(TextFormat::AQUA." Unloaded Successfully!");
      }
 
-     public function onCommand(CommandSender $issuer, Command $cmd, $label, array $args){
+     public function onCommand(CommandSender $issuer, Command $cmd, array $args){
           switch($cmd->getName()){
-          case "tag":
+          case "tag":             
           if($issuer instanceof Player){  
           switch($args[0] == "blue"){
               
           }
-			if($sender->hasPermission("tag.command.blue") or $sender->hasPermission("tag.command")){
+			if($issuer->hasPermission("tag.command.blue") or $issuer->hasPermission("tag.command")){
               }else{
 	$sender->sendMessage("You do not have permission to use that command.");             
         return true;
               }
-          $currentTag = $player->getName();
-          $player->setNameTag("§1$currentTag");
-          $player->sendMessage("[ColorfulTag] Your NameTag has been changed to blue");                                             
+          $currentTag = $sender->getName();
+          $sender->setNameTag("§1$currentTag");
+          $sender->sendMessage("[ColorfulTag] Your NameTag has been changed to blue");                                             
                         break;
           }elseif($args[0] == "red"){                          
 			if($sender->hasPermission("tag.command.red") or $sender->hasPermission("tag.command")){
@@ -42,42 +42,46 @@ class main extends PluginBase{
 	$sender->sendMessage("You do not have permission to use that command.");
         return true;
                                           }
-           $currentTag = $player->getName();
-          $player->setNameTag("§c$currentTag");
-          $player->sendMessage("[ColorfulTag] Your NameTag has been changed to red");
+           $currentTag = $sender->getName();
+          $sender->setNameTag("§c$currentTag");
+          $sender->sendMessage("[ColorfulTag] Your NameTag has been changed to red");
                         
                         break;
  }elseif($args[0] == "green"){
-			if($sender->hasPermission("tag.command.green") or $sender->hasPermission("tag.command")){
+			if($issuer->hasPermission("tag.command.green") or $issuer->hasPermission("tag.command")){
+                                       return true;
                                           }else{
 	$sender->sendMessage("You do not have permission to use that command.");
         return true;
                                           }
-          $currentTag = $player->getName();
-          $player->setNameTag("§a$currentTag");
-          $player->sendMessage("[ColorfulTag] Your NameTag has been changed to green");
+          $currentTag = $sender->getName();
+          $sender->setNameTag("§a$currentTag");
+          $sender->sendMessage("[ColorfulTag] Your NameTag has been changed to green");
      
 			break;
  }elseif($args[0] == "gold"){
-			if($sender->hasPermission("tag.command.gold") or $sender->hasPermission("tag.command")){
+     
+         if($issuer->hasPermission("tag.command.gold") or $issuer->hasPermission("tag.command")) {
+             return true;       
                                           }else{
 	$sender->sendMessage("You do not have permission to use that command.");
         return true;
                                           }
-          $currentTag = $player->getName();
-          $player->setNameTag("§6$currentTag");
-          $player->sendMessage("[ColorfulTag] Your NameTag has been changed to gold");                                      
+          $currentTag = $sender->getName();
+          $sender->setNameTag("§6$currentTag");
+          $sender->sendMessage("[ColorfulTag] Your NameTag has been changed to gold");                                      
 			break;
  }elseif($args[0] == "reset"){
  }
-			if($sender->hasPermission("tag.command.reset") or $sender->hasPermission("tag.command")){
+			if($issuer->hasPermission("tag.command.reset") or $issuer->hasPermission("tag.command")){
+                                       return true;
                                           }else{
 	$sender->sendMessage("You do not have permission to use that command.");
         return true;
                                           }
-         $currentTag = $player->getName();
-         $player->setNameTag($player->getName());
-          $player->sendMessage("[ColorfulTag] Your NameTag has been reset!");
+         $currentTag = $sender->getName();
+         $sender->setNameTag($sender->getName());
+          $sender->sendMessage("[ColorfulTag] Your NameTag has been reset!");
 
 			break;
                     }
