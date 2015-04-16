@@ -51,8 +51,7 @@ class main extends PluginBase{
           case "tag":
          if($sender->hasPermission("tag.command")){	
           if($issuer instanceof Player){  
-          switch($args[0]){
-	                case "blue":
+          switch($args[0] == "blue"){
 			if($sender->hasPermission("tag.command.blue") or $sender->hasPermission("tag.command")){
               }else{
 	$sender->sendMessage("You do not have permission to use that command.");
@@ -62,7 +61,7 @@ class main extends PluginBase{
                          
                         }
                         break;
-                        case "red":                           
+          }elseif($args[0] == "red"){                          
 			if($sender->hasPermission("tag.command.red") or $sender->hasPermission("tag.command")){
                                           }else{
 	$sender->sendMessage("You do not have permission to use that command.");
@@ -71,7 +70,7 @@ class main extends PluginBase{
                          return true;
                         }
                         break;
-                    	case "green":
+ }elseif($args[0] == "green"){
 			if($sender->hasPermission("tag.command.green") or $sender->hasPermission("tag.command")){
                                           }else{
 	$sender->sendMessage("You do not have permission to use that command.");
@@ -80,7 +79,7 @@ class main extends PluginBase{
                          return true;
                         }
 			break;
-                    	case "gold":
+ }elseif($args[0] == "gold"){
 			if($sender->hasPermission("tag.command.gold") or $sender->hasPermission("tag.command")){
                                           }else{
 	$sender->sendMessage("You do not have permission to use that command.");
@@ -89,7 +88,7 @@ class main extends PluginBase{
                          return true;
 	         	}
 			break;
-	                case "reset":
+ }elseif($args[0] == "reset"){
 			if($sender->hasPermission("tag.command.reset") or $sender->hasPermission("tag.command")){
                                           }else{
 	$sender->sendMessage("You do not have permission to use that command.");
