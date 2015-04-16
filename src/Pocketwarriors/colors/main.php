@@ -52,6 +52,8 @@ class main extends PluginBase{
          if($sender->hasPermission("tag.command")){	
           if($issuer instanceof Player){  
           switch($args[0] == "blue"){
+          	
+          }
 			if($sender->hasPermission("tag.command.blue") or $sender->hasPermission("tag.command")){
               }else{
 	$sender->sendMessage("You do not have permission to use that command.");
