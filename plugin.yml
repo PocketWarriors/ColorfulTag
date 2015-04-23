@@ -1,5 +1,5 @@
 name: ColorfulTag
-main: Pocketwarriors\colors\main
+main: Pocketwarriors\colors\Main
 version: 0.5
 api: [1.12.0]
 load: POSTWORLD
