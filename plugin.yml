@@ -29,4 +29,7 @@ tag.command:
       default: true
     tag.command.gold:
       description: ""
--      default: true
+      default: true
+          tag.command.reset:
+      description: ""
+      default: true
